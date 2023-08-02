@@ -1,0 +1,42 @@
+(1) Write a C Function that prints the cube of any number.
+(2) Write a C Function that takes one character and checks 
+	if it alphabet or not.
+(3) Write a C Function that check if the number if positive or negative.
+-----------------------------------------------------------------------------
+(4) Write a C Function that return the addition or subtraction 
+	or multiplication or division for two numbers. The function 
+	should take the required operation and two numbers as arguments. 
+	It also should check that the input operation is one of those 
+	operation that mentioned before and if not it should return error. 
+	The function should be implemented using switch case.
+-----------------------------------------------------------------------------
+
+(5) Write a C Function that checks if an integer is even or odd.
+
+-----------------------------------------------------------------------------
+
+(6) Write C Function that converts the any letter from lowercase to uppercase.
+//string
+-----------------------------------------------------------------------------
+
+(7) Write a C Function that reads two integers and checks if the first 
+is multiple of the second.
+
+-----------------------------------------------------------------------------
+
+(8)Write a C Function that display Prime Numbers between Intervals 
+(two numbers) by Making Function.
+
+----------------------------------------------------------------------------
+
+(9)Write a C Function that swaps the value of two integer numbers.
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+(10) Write a program to display the following stars pattern. 
+      * 1
+     *** 3
+    ***** 5
+   ******* 7 
+  ********* 9
