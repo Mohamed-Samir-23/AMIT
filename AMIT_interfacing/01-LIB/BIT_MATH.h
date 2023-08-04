@@ -1,3 +1,6 @@
+
+
+
 //GOURD FILE to viod double include 
 
 #ifndef _BIT_MATH_H_ //FOR WORK EXPERIANCE 

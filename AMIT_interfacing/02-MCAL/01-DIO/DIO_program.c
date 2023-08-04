@@ -96,13 +96,116 @@ Std_ReturnType DIO_udtGetPinValue
 	Std_ReturnType udtReturnType=E_NOT_OK;
 	switch(u8Port)
 	{
-		case DIO_PORTA:*pu8Value=GET_BIT(DIO->PINA, u8Pin);udtReturnType=E_OK;break;
-		case DIO_PORTB:*pu8Value=GET_BIT(DIO->PINB, u8Pin);udtReturnType=E_OK;break;
-		case DIO_PORTC:*pu8Value=GET_BIT(DIO->PINC, u8Pin);udtReturnType=E_OK;break;
-		case DIO_PORTD:*pu8Value=GET_BIT(DIO->PIND, u8Pin);udtReturnType=E_OK;break;
+		case DIO_PORTA:*pu8Value=GET_BIT(DIO->PINA, u8Pin);udtReturnType = E_OK;break;
+		case DIO_PORTB:*pu8Value=GET_BIT(DIO->PINB, u8Pin);udtReturnType = E_OK;break;
+		case DIO_PORTC:*pu8Value=GET_BIT(DIO->PINC, u8Pin);udtReturnType = E_OK;break;
+		case DIO_PORTD:*pu8Value=GET_BIT(DIO->PIND, u8Pin);udtReturnType = E_OK;break;
 		default:/*!Comment: DO nothing*/break;
 	}
 	
 	return udtReturnType;
 	
+}
+
+
+Std_ReturnType DIO_udtTogglePinValue
+(
+	unit8 u8Port,
+	unit8 u8Pin
+)
+{
+	Std_ReturnType udtReturnType=E_NOT_OK;
+	switch(u8Port)
+	{
+		case DIO_PORTA:TOG_BIT(DIO->PORTA, u8Pin);udtReturnType=E_OK;break;
+		case DIO_PORTB:TOG_BIT(DIO->PORTB, u8Pin);udtReturnType=E_OK;break;
+		case DIO_PORTC:TOG_BIT(DIO->PORTC, u8Pin);udtReturnType=E_OK;break;
+		case DIO_PORTD:TOG_BIT(DIO->PORTD, u8Pin);udtReturnType=E_OK;break;
+		default:/*!Comment: DO nothing*/break;
+	}
+	return udtReturnType;
+}
+
+
+Std_ReturnType DIO_udtSetPortDirection
+(
+	unit8 u8Port,
+	unit8 u8Value
+)
+{
+	Std_ReturnType udtReturnType=E_NOT_OK;
+	switch(u8Port)
+	{
+		case DIO_PORTA:DIO->DDRA = u8Value;udtReturnType = E_OK;break;
+		case DIO_PORTB:DIO->DDRB = u8Value;udtReturnType = E_OK;break;
+		case DIO_PORTC:DIO->DDRC = u8Value;udtReturnType = E_OK;break;
+		case DIO_PORTD:DIO->DDRD = u8Value;udtReturnType = E_OK;break;
+		default:/*!Comment: DO nothing*/break;
+	}
+	return udtReturnType;
+}
+
+
+
+Std_ReturnType DIO_udtSetPortValue
+(
+	unit8 u8Port,
+	unit8 u8Value
+)
+{
+	Std_ReturnType udtReturnType=E_NOT_OK;
+	switch(u8Port)
+	{
+		case DIO_PORTA:DIO->PORTA = u8Value;udtReturnType = E_OK;break;
+		case DIO_PORTB:DIO->PORTB = u8Value;udtReturnType = E_OK;break;
+		case DIO_PORTC:DIO->PORTC = u8Value;udtReturnType = E_OK;break;
+		case DIO_PORTD:DIO->PORTD = u8Value;udtReturnType = E_OK;break;
+		default:/*!Comment: DO nothing*/break;
+	}
+	return udtReturnType;
+}
+
+
+Std_ReturnType DIO_udtGetPortValue
+(
+	unit8 u8Port,
+	unit8* pu8Value
+)
+{
+	
+	
+	Std_ReturnType udtReturnType=E_NOT_OK;
+	switch(u8Port)
+	{
+		case DIO_PORTA:*pu8Value = DIO->PINA;udtReturnType = E_OK;break;
+		case DIO_PORTB:*pu8Value = DIO->PINB;udtReturnType = E_OK;break;
+		case DIO_PORTC:*pu8Value = DIO->PINC;udtReturnType = E_OK;break;
+		case DIO_PORTD:*pu8Value = DIO->PIND;udtReturnType = E_OK;break;
+		default:/*!Comment: DO nothing*/break;
+	}
+	
+	return udtReturnType;
+	
+	
+	
+}
+
+
+Std_ReturnType DIO_udtReadPortValue
+(
+	unit8 u8Port,
+	unit8* pu8Value
+)
+{
+	Std_ReturnType udtReturnType=E_NOT_OK;
+	switch(u8Port)
+	{
+		case DIO_PORTA:*pu8Value = DIO->PORTA;udtReturnType = E_OK;break;
+		case DIO_PORTB:*pu8Value = DIO->PORTB;udtReturnType = E_OK;break;
+		case DIO_PORTC:*pu8Value = DIO->PORTC;udtReturnType = E_OK;break;
+		case DIO_PORTD:*pu8Value = DIO->PORTD;udtReturnType = E_OK;break;
+		default:/*!Comment: DO nothing*/break;
+	}
+	
+	return udtReturnType;
 }

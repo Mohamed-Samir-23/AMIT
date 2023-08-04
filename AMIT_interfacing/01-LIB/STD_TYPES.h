@@ -1,7 +1,7 @@
 #ifndef _STD_TYPES_H_
 #define _STD_TYPES_H_
 
-/********************************** Standard type for unsigned integer **********************************/
+/********************************** Standard type for unsigned integer ********************************/
 typedef unsigned char unit8;
 typedef unsigned short unit16;
 typedef unsigned long int unit32;
@@ -9,7 +9,7 @@ typedef unsigned long int unit32;
 typedef signed char snit8;
 typedef signed short snit16;
 typedef signed long int snit32;
-/********************************** Standard type for floats **********************************/
+/********************************** Standard type for floats ******************************************/
 typedef float f32;
 typedef double f64;
 
